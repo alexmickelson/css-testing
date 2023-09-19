@@ -8,11 +8,16 @@
 .cat-figure {
     display: inline-block; 
     margin: 2em;
-    padding-bottom: 1em;
     width: 30%;
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     transition: 800ms;
+}
+
+.cat-figure a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
 .cat-figure:hover {
@@ -21,19 +26,49 @@
 }
 
 .cat-figure img {
-    width: 100%;
+    height: 5em;
+    margin: 2px;
+    padding: 2px;
+    display: inline-block;
     border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
 }
 
-.cat-figure figcaption {
+.cat-figure p {
     margin-left: .5em;
     margin-right: .5em;
+    margin-top: .5em;
+    vertical-align: top;
+    display: inline-block;
 }
 .cat-figure-container {
     border-width: .1em;
     border-color: rgb(161, 161, 161);
     border-style: solid;
     border-radius: var(--border-radius);
-    background-color: var(--background-color)
+    background-color: var(--background-color);    
+}
+
+nav {
+    width: 30%;
+    display: inline-block;
+    background-color: var(--background-color);
+}
+
+.main {
+    display: inline-block;
+    width: 50%;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav li {
+    list-style-type: none;
+    margin-top: .2em;
+}
+
+footer {
+    background-color: rebeccapurple;
 }
