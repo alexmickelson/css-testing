@@ -5,10 +5,17 @@
     --background-color: #F4EEEE;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .cat-figure {
-    display: inline-block; 
+    display: block; 
     margin: 2em;
-    width: 30%;
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     transition: 800ms;
@@ -17,7 +24,9 @@
 .cat-figure a {
     margin: 0;
     padding: 0;
+    width: 15em;
     text-decoration: none;
+    color: rgb(99, 40, 112);
 }
 
 .cat-figure:hover {
@@ -25,11 +34,15 @@
     box-shadow: .5em 1em 1em;
 }
 
+.cat-figure a {
+    display: flex;
+    flex-direction: row;
+}
+
 .cat-figure img {
-    height: 5em;
+    width: 50%;
     margin: 2px;
     padding: 2px;
-    display: inline-block;
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
 }
@@ -39,25 +52,40 @@
     margin-right: .5em;
     margin-top: .5em;
     vertical-align: top;
-    display: inline-block;
 }
+
+.cat-figure-container-parent{
+    width: 100%;
+}
+
 .cat-figure-container {
+    max-width: 100%;
     border-width: .1em;
     border-color: rgb(161, 161, 161);
     border-style: solid;
     border-radius: var(--border-radius);
-    background-color: var(--background-color);    
+    background-color: var(--background-color);
+    display: flex;
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
 }
+
+
 
 nav {
-    width: 30%;
-    display: inline-block;
+    width: 100%;
+    display: block;
     background-color: var(--background-color);
 }
-
 .main {
-    display: inline-block;
-    width: 50%;
+    display: block;
+    /* width: 100%; */
+    flex-grow: 1;
+    min-width: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+
 }
 
 nav a {
@@ -67,8 +95,34 @@ nav a {
 nav li {
     list-style-type: none;
     margin-top: .2em;
+    padding-left: .3em;;
+}
+nav ul {
+    display: flex;
 }
 
 footer {
     background-color: rebeccapurple;
+}
+
+h1 {
+    text-align: center;
+}
+
+.main-row {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    flex: 1;
+}
+@media screen and (min-width: 400px) {
+    .main-row {
+        flex-direction: row;
+    }
+    nav {
+        width: 10em;
+    }
+    nav ul {
+        display: block;
+    }
 }
